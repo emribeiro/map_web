@@ -6,11 +6,16 @@
 
 <!--Angular Includes -->
 <script type="text/javascript" src="assets/angular-1.6.1/angular.min.js" ></script>
-<script src="app.js"> </script>
+<script src="app.module.js"> </script>
+<script src="componente/componente.module.js"></script>
+<script src="componente/incluir-componente/controller/incluir-componente.component.js"></script>
 
 <!-- Bootstrap includes -->
+<link href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
-<body ng-controller="indexController">
-Bem vindo! Esta e a pagina {{application}}
+<body>
+<div class="container">
+	<incluir-componente></incluir-componente>
+</div>
 </body>
 </html>
