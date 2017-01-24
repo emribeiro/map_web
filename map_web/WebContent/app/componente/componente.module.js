@@ -1,2 +1,2 @@
 angular.
-	module('componente',[]);
+	module('componente',['ngResource']);

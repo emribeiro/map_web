@@ -2,15 +2,21 @@ angular.
 	module('componente').
 	component('incluirComponente', {
 		templateUrl: 'componente/incluir-componente/template/incluir-componente.template.html',
-		controller: function IncluirComponenteController($scope){
+		controller: ['$scope', 'Servico',  function IncluirComponenteController($scope, Servico){
 			$scope.clean = {};
+			$scope.message = '';
 			
 			$scope.limpar = function(){
 				$scope.componente = angular.copy($scope.clean);
 			};
 			
 			$scope.salvar = function(componente){
-				alert(componente.nome + " incluído!!!!");
+				$scope.componente.inclusao = new Date();
+				
+				Servico.save(componente, function(response){
+					alert(response.status);
+				});
+				alert($scope.message);
 			};
-		}
+		}]
 	});

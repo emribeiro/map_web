@@ -1,3 +1,4 @@
 var mapWebApp = angular.module('mapWebApp',[
-	'componente'
+	'componente',
+	'ngResource'
 ]);
