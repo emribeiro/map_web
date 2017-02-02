@@ -1,4 +1,4 @@
-<div class="col-md-offset-3 col-md-6">
+<div class="col-sm-4">
 	<form>
 		<div class="form-group">
 			<label for="nomeComponente">Nome</label>
@@ -10,12 +10,12 @@
 		</div>
 		
 		<div class="from-group">
-			<label for="descricaoComponente">Descrição</label>
+			<label for="descricaoComponente">Descri&ccedil;&atilde;o</label>
 			<textarea class="form-control" 
 					  rows="3" 
 					  id="descricaoComponente" 
 					  ng-model="componente.descricao" 
-			          placeholder="Descrição do Componente"></textarea>
+			          placeholder="Descri&ccedil;&atilde;o do Componente"></textarea>
 		</div>
 		
 		<div class="form-group">
@@ -28,18 +28,11 @@
 		</div>
 		
 		<div class="form-group">
-			<div class="col-md-offset-4">
+			<div>
 				<button type="button" class="btn btn-primary" ng-click="limpar()">Limpar</button>
 				<button type="button" class="btn btn-success" ng-click="salvar(componente)">Incluir</button>
 			</div>
 		</div>
 	</form>
-	
-	
-	<div class="col-md-3">
-		Nome:      {{componente.nome}}
-		Descrição: {{componente.descricao}}
-		Tipo:      {{componente.tipo}} 
-	</div>
 </div>
 
