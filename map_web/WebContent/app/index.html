@@ -7,20 +7,16 @@
 <!--Angular Includes -->
 <script type="text/javascript" src="assets/angular-1.6.1/angular.min.js" ></script>
 <script type="text/javascript" src="assets/angular-1.6.1/angular-resource.min.js" ></script>
-<script src="app.module.js"> </script>
-<script src="componente/componente.module.js"></script>
-<script src="componente/incluir-componente/service/incluir-componente.service.js"></script>
-<script src="componente/incluir-componente/controller/incluir-componente.controller.js"></script>
-<script src="componente/listar-componente/service/listar-componente.service.js"></script>
-<script src="componente/listar-componente/controller/listar-componente.controller.js"></script>
-
+<script type="text/javascript" src="assets/angular-1.6.1/angular-route.min.js" ></script>
 <!-- Bootstrap includes -->
 <link href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Includes do Sistema -->
+<script src="app.module.js"> </script>
+<script src="controllers/componente/listar-componente.controller.js"></script>
 </head>
 <body>
 <div class="container">
-	<incluir-componente></incluir-componente>
-	<listar-componente></listar-componente>
+	<div ng-view></div>
 </div>
 </body>
 </html>
