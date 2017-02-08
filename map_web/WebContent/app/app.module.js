@@ -7,4 +7,9 @@ app.config(function($routeProvider){
 			controller: 'ListarComponenteCtrl',
 			controllerAs: 'lctrl'
 		})
+		.when('/componente', {
+			templateUrl: 'partials/componente/incluir-componente.partial.html', 
+			controller: 'IncluirComponenteCtrl',
+			controllerAs: 'ctrl'
+		});
 })

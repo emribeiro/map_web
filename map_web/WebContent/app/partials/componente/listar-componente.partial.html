@@ -1,6 +1,13 @@
 <h1>{{lctrl.titulo}}</h1>
 
+
+<button id="novoComponenteBtn" class="btn btn-success" ng-click="lctrl.toIncluir()">Novo Componente</button>
 <table class="table">
+	<tr>
+		<th> ID </th>
+		<th>Nome do Componente</th>
+		<th>Tipo</th>
+	</tr>
 	<tr ng-repeat="componente in lctrl.componentes"> 
 		<td> {{componente.id}} </td>
 		<td> {{componente.nome}} </td>

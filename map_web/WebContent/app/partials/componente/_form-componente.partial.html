@@ -1,0 +1,14 @@
+<div class="form-group">
+	<input type="text" class="form-control" id="nomeComponenteInput" placeholder="Nome do Componente" ng-model="ctrl.componente.nome">
+</div>
+<div class="form-group">
+ 	<textarea rows="5" class="form-control" id="descricaoComponenteInput" placeholder="Descri&ccedil&atilde;o do Componente" ng-model="ctrl.componente.descricao"></textarea>
+</div>
+
+<div class="form-group">
+	<select class="form-control" ng-model="ctrl.componente.tipo">
+		<option value="1"> JCL </option>
+		<option value="2"> Rotina </option>
+	</select>
+</div>
+<button id="submitComponente" class="btn btn-primary" type="submit">Salvar</button>

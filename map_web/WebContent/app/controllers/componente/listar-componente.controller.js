@@ -1,26 +1,31 @@
 var app = angular.module('mapWebApp');
 
-var ListarComponenteCtrl = function($scope, $resource){
-	var _this =  this;
+var _this =  undefined;
+
+var ListarComponenteCtrl = function($scope, ComponenteService, $location){
+	
+	_this = this;
+	_this.ComponenteService = ComponenteService;
+	_this.$location = $location;
 	
 	_this.titulo = 'Listagem de Componentes';
-	
-	$resource('/map_service-1.0.0/rest/componente/lista').query(function(response){
-		_this.componentes = response;
-	}, function(err){
-		alert(err.mensagem)
-	});
-	
+	_this.listar();
 };
 
 ListarComponenteCtrl.prototype.listar = function(){
-	return $resource('/map_service-1.0.0/rest/componente/lista').query(function(response){
-		return response;
-	}, function(err){
-		alert(err.mensagem)
-	});
-}
 
-ListarComponenteCtrl.$inject = ['$scope', '$resource'];
+	_this.ComponenteService.listar()
+			.then(function(success){
+				_this.componentes = success.data;
+			}, function(err){
+				alert(err.data.mensagem);
+			})
+};
+
+ListarComponenteCtrl.prototype.toIncluir = function(){
+	_this.$location.path('/componente');
+};
+
+ListarComponenteCtrl.$inject = ['$scope', 'ComponenteService', '$location'];
 
 app.controller('ListarComponenteCtrl', ListarComponenteCtrl);

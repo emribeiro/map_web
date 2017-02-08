@@ -1,0 +1,21 @@
+<div class="col-sm-4">
+
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			Novo Componente
+		</div>
+		
+		<div class="panel-body">
+			<form role="form" ng-submit="ctrl.salvar(ctrl.componente)">
+				<div ng-include="'partials/componente/_form-componente.partial.html'"></div>
+			</form>
+		</div>
+		
+		<div class="panel-footer">
+			Nome: {{ctrl.componente.nome}} <br/>
+			Descri&ccedil&atildeo: {{ctrl.componente.descricao}} <br/>
+			Tipo: {{ctrl.componente.tipo}} <br/>
+		</div>
+	</div>
+
+</div>
