@@ -11,5 +11,11 @@ app.config(function($routeProvider){
 			templateUrl: 'partials/componente/incluir-componente.partial.html', 
 			controller: 'IncluirComponenteCtrl',
 			controllerAs: 'ctrl'
-		});
+		})
+		.when('/componente/:componenteId', {
+			templateUrl: 'partials/componente/alterar-componente.partial.html',
+			controller: 'AlterarComponenteCrtl',
+			controllerAs: 'ctrl'
+		})
+		;
 })

@@ -8,6 +8,18 @@ app.factory('ComponenteService', function($http){
 	
 		listar: function(){
 			return $http.get('/map_service-1.0.0/rest/componente/lista');
+		}, 
+		
+		alterar: function(componente){
+			return $http.put('/map_service-1.0.0/rest/componente', componente);
+		},
+		
+		pesquisarPorId: function(componenteId){
+			return $http.get('/map_service-1.0.0/rest/componente', {
+				params: {
+					id: componenteId
+				}
+			});
 		}
 	}
 });

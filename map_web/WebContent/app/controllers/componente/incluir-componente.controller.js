@@ -6,6 +6,12 @@ var IncluirComponenteCtrl = function($scope, ComponenteService, $location){
 	_this = this;
 	_this.ComponenteService = ComponenteService;
 	_this.$location = $location;
+	
+	_this.tipos = [
+		{label: 'JCL', value: '1'},
+		{label: 'Rotina', value: '2'}
+	];
+	
 }
 
 IncluirComponenteCtrl.prototype.salvar = function(componente){

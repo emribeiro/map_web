@@ -26,6 +26,10 @@ ListarComponenteCtrl.prototype.toIncluir = function(){
 	_this.$location.path('/componente');
 };
 
+ListarComponenteCtrl.prototype.toAlterar = function(id){
+	_this.$location.path('/componente/' + id);
+}
+
 ListarComponenteCtrl.$inject = ['$scope', 'ComponenteService', '$location'];
 
 app.controller('ListarComponenteCtrl', ListarComponenteCtrl);
