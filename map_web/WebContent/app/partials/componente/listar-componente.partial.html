@@ -12,6 +12,12 @@
 		<td> {{componente.id}} </td>
 		<td> {{componente.nome}} </td>
 		<td> {{componente.tipo}} </td>
-		<td> <button type="button" class="btn btn-primary" ng-click="lctrl.toAlterar(componente.id)"> <span class="glyphicon glyphicon-pencil"></span> Alterar</button></td>
+		<td> 
+			<button type="button" class="btn btn-primary" ng-click="lctrl.toAlterar(componente.id)"> 
+				<span class="glyphicon glyphicon-pencil"></span> Alterar</button>
+		
+			<button type="button" class="btn btn-danger" ng-click="lctrl.excluir(componente.id)"> 
+				<span class="glyphicon glyphicon-trash"></span> Excluir</button>
+		</td>
 	</tr>
 </table>

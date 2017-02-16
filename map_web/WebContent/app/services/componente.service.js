@@ -20,6 +20,14 @@ app.factory('ComponenteService', function($http){
 					id: componenteId
 				}
 			});
+		},
+		
+		excluir: function(componenteId){
+			return $http.delete('/map_service-1.0.0/rest/componente', {
+				params: {
+					id: componenteId
+				}
+			});
 		}
 	}
 });
